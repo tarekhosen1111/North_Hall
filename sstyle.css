@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: "Times New Roman", Times, serif;
+}
+nav{
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    background-color: #40128B;
+    height: 100px;
+    width:100%;
+    padding:0px 50px 0px 80px;
+    align-items: center;
+    z-index: 1;
+}
+
+.st{
+    font-size: 50px;
+    color: aliceblue;
+    font-style: italic;
+    font-weight: bold ;
+    
+}
+nav ul{
+    display:flex;
+    list-style-type:none;
+
+}
+nav ul li{
+   list-style-type: none;
+   margin-left: 18px;
+   margin-right: 18px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+    font-size:23px;
+    font-weight: 500;
+    padding:10px;
+    border-radius: 5px ;
+
+
+}
+nav ul li a:hover, nav ul li a.active{
+    background-color: #2596be;
+    
+}
+
+
+.slide-show{
+    padding-top: 100px;
+    width: 100%;
+
+    background-image: url(img/thhall.jpg);
+    
+
+}
+.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin:auto;
+    margin-top: 55px;
+    position: relative;
+    overflow: hidden;
+    background:rgb(126, 126, 209);
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    
+    transition: 1s;
+    background-color: darkgray;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+.menu-btn{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+@media only screen and (max-width: 1009px){
+    
+    nav ul{
+        position: fixed;
+        top:100px;
+        left:-100%;
+        background-color: black;
+        height: 100vh;
+        width: 50%;
+        height: auto;
+        padding-top:20px;
+        z-index: 1;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+    .st{
+        font-size: 20px;
+        margin-left: -45px;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+    #click:checked ~ul{
+        left:0;
+    }
+    nav ul li{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    nav ul li a{
+        font-size:22px;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        background: none;
+        color: red;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .slider{
+        height: 400px;
+        position: relative;
+        
+    }  
+
+}
+.abcd{
+    background-color: 		#dcdcdc	;
+  
+  }
+  .five{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30%;
+    }
+    .five .provost{
+      display: grid;
+    }
+    .five .provost p{
+      margin: 2px;
+      text-align: center;
+      position: relative;
+      
+    }
+    .five .provost-img{
+      
+      position: relative;
+      float: left;
+      width: auto;
+      height: auto;
+    }
+    .five .provost-msg{
+      display: grid;
+      position: relative;
+      text-align:justify;
+      padding: 20px;
+     
+    }
+    .five .provost-msg h1{
+      margin: 0%;
+    }
+    .grid-container{
+      height: 100vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+      grid-gap: 20px;
+      padding: 20px;
+      height: auto;
+      
+    }
+    .grid-container .box{
+      position: relative;
+      box-shadow: 0 10px 10px rgba(199, 209, 201);
+      height: 300px;
+      width: 70%;
+    }
+    .grid-container .box .img-box{
+      width: 100%;
+      height: 80%;
+    }
+    .grid-container .box .img-box img{
+      width: 80%;
+      height: 100%;
+      object-fit: scale-down;
+      align-items: center;
+    }
+    .grid-container .box p{
+      text-align: center;
+      margin: 2px;
+      text-align: justify;
+    }
+    .hall {
+      display: flex;
+      
+    }
+    .hall .hall-pic{
+      width: 30%;
+      height: 30%;
+    }
+    .hall .hall-pic img{
+      object-fit: scale-down;
+      border-radius: 10px;
+      height: 300px;
+    }
+    .hall .hall-info{
+      padding: 5px;
+      text-align: justify;
+    }
+  p{
+      font-size: 25px;
+  }
+ 
+  .footer-col{
+    text-align: center;
+    background-color: blueviolet;
+  }
+  .social-links a {
+    font-size: 45px; /* Adjust the font size as per your preference */
+    padding: 50px; /* Adjust the padding as per your preference */
+  }
+
+.social-links a i {
+  display: inline-block;
+  width: 24px; /* Adjust the width as per your preference */
+  height: 24px; /* Adjust the height as per your preference */
+}
+
+
